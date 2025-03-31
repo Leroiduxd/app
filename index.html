@@ -104,7 +104,7 @@
                   </svg>
                 </a>
               </div>
-              <div data-w-id="f1a21736-2746-bf4f-0756-42659b8440b4" class="div-block-296">
+              <div data-w-id="f1a21736-2746-bf4f-0756-42659b8440b4" class="div-block-296" id="charttheme">
                 <div class="div-block-298">
                   <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" app="ikonik" class="ikonik-11k9l">
                     <defs app="ikonik">
@@ -117,7 +117,7 @@
                     </g>
                   </svg>
                 </div>
-                <div class="div-block-297">
+                <div class="div-block-297" >
                   <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="36" height="36" viewBox="0 0 32 32" app="ikonik" class="ikonik-bu4ko">
                     <rect fill="none" width="32" height="32" app="ikonik"></rect>
                     <rect x="15" y="2.0049" width="2" height="5" app="ikonik"></rect>
@@ -504,7 +504,7 @@
                             <div class="div-block-474">
                               <div data-w-id="655bec7b-eaf2-c952-5d89-dbca9e08e6bf" class="text-block-231" id=base>AAPL</div>
                             </div>
-                            <a data-w-id="655bec7b-eaf2-c952-5d89-dbca9e08e6c1" href="#" class="button-102 w-button"  data-resolution="1" onclick="connect(); connectWallet();">1M</a>
+                            <a data-w-id="655bec7b-eaf2-c952-5d89-dbca9e08e6c1" href="#" class="button-102 w-button"  data-resolution="1" >1M</a>
                             <a data-w-id="655bec7b-eaf2-c952-5d89-dbca9e08e6c3" href="#" class="button-106 w-button" data-resolution="5" >5M</a>
                             <a data-w-id="655bec7b-eaf2-c952-5d89-dbca9e08e6c5" href="#" class="button-101 w-button" data-resolution="15">15M</a>
                             <a data-w-id="655bec7b-eaf2-c952-5d89-dbca9e08e6c7" href="#" class="button-92 w-button" data-resolution="60">1H</a>
@@ -521,7 +521,7 @@
                                 </svg>
                               </a>
                             </div>
-                            <a id="w-node-_655bec7b-eaf2-c952-5d89-dbca9e08e6d8-1f521c30" data-w-id="655bec7b-eaf2-c952-5d89-dbca9e08e6d8" href="#" class="link-block-3 w-inline-block">
+                            <a id="w-node-_655bec7b-eaf2-c952-5d89-dbca9e08e6d8-1f521c30"   data-w-id="655bec7b-eaf2-c952-5d89-dbca9e08e6d8" href="#" class="link-block-3 w-inline-block">
                               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16" app="ikonik" class="ikonik-vgkxni">
                                 <path d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5M.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5m15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5" app="ikonik"></path>
                               </svg>
@@ -566,11 +566,11 @@
                         </div>
                         <div class="div-block-477">
                           <div class="div-block-466">
-                            <div class="text-block-227">4</div>
+                            <div class="text-block-227" id="latency-result">...</div>
                             <div class="text-block-227">ms</div>
                           </div>
                           <div class="div-block-466">
-                            <div class="text-block-227">100.3</div>
+                            <div class="text-block-227" id="speed-result">...</div>
                             <div class="text-block-227">Mbps</div>
                           </div>
                         </div>
@@ -923,11 +923,11 @@
                   </div>
                   <div class="div-block-516">
                     <div class="div-block-505">
-                      <div class="text-block-255">4</div>
+                      <div class="text-block-255" id="latency-result" >...</div>
                       <div class="text-block-255">ms</div>
                     </div>
                     <div class="div-block-505">
-                      <div class="text-block-255">100.3</div>
+                      <div class="text-block-255" id="speed-result">...</div>
                       <div class="text-block-255">Mbps</div>
                     </div>
                   </div>
@@ -1019,7 +1019,7 @@
             "XAGUSD": { feedId: "0x765d2ba906dbc32ca17cc11f5310a89e9ee1f6420508c63861f2f8ba4ee34bb2", symbol:"Metal.XAG/USD", category:"metal" }
           };
           
-          // VARIABLES POUR LE GRAPHIQUE
+          // VARIABLES POUR LE GRAPHIQUE ET STREAMING
           let currentAsset = assets["AAPL"];
           let priceEventSource = null;
           let chartStreamController = null;
@@ -1041,6 +1041,9 @@
           let signer, contract;
           let isShortGlobal = false;
           let isSlTpActive = false;
+          
+          // VARIABLE POUR LE THEME (Sombre par défaut)
+          let isDarkTheme = true;
           
           /********* FONCTIONS DE FORMATTAGE *********/
           function formatPrice(value, expo) {
@@ -1108,17 +1111,29 @@
               })
               .catch(error => console.error('Erreur historique :', error));
           }
+          
+          // Fonction initChart avec changement de thème et mise à jour des champs OHLC
           async function initChart() {
             if(chart) chart.remove();
-            chart = LightweightCharts.createChart(document.getElementById('chartContainer'), {
+            
+            // Options de configuration du graphique selon le thème choisi
+            const themeOptions = isDarkTheme ? {
               layout: { textColor: 'rgba(255,255,255,0.8)', background: { type:'solid', color:'#000' }, fontFamily: "'Source Code Pro', monospace" },
               grid: { vertLines: { color:'rgba(255,255,255,0.1)' }, horzLines: { color:'rgba(255,255,255,0.1)' } },
               timeScale: { timeVisible: true, secondsVisible: false, barSpacing: 15 }
-            });
+            } : {
+              layout: { textColor: 'rgba(0,0,0,0.8)', background: { type:'solid', color:'#fff' }, fontFamily: "'Source Code Pro', monospace" },
+              grid: { vertLines: { color:'rgba(0,0,0,0.1)' }, horzLines: { color:'rgba(0,0,0,0.1)' } },
+              timeScale: { timeVisible: true, secondsVisible: false, barSpacing: 15 }
+            };
+            
+            chart = LightweightCharts.createChart(document.getElementById('chartContainer'), themeOptions);
+            
             chart.priceScale('right').applyOptions({
               autoScale: true, scaleMargins: { top: 0.1, bottom: 0.2 },
               tickMarkFormatter: price => price < 10 ? price.toFixed(4) : price.toFixed(2)
             });
+            
             candleSeries = chart.addCandlestickSeries({
               upColor: '#2196F3', downColor: '#ef5350', borderVisible: true,
               wickUpColor: '#2196F3', wickDownColor: '#ef5350',
@@ -1130,7 +1145,10 @@
             });
             await loadHistoricalChartData();
             startChartStreaming();
+            // Ajout d'un appel pour mettre à jour les champs OHLC
+            updateHistorical(currentAsset);
           }
+          
           async function loadHistoricalChartData() {
             let days;
             switch(currentResolution) {
@@ -1160,6 +1178,7 @@
               currentCandle = formattedData.length>0 ? formattedData[formattedData.length-1] : null;
             } catch(error) { console.error('Erreur chargement graphique :', error); alert('Erreur de chargement du graphique'); }
           }
+          
           async function startChartStreaming() {
             if(isChartStreaming) return;
             isChartStreaming = true;
@@ -1190,6 +1209,7 @@
               setTimeout(startChartStreaming,5000);
             } finally { isChartStreaming = false; }
           }
+          
           function processNewChartPrice(price) {
             const timestamp = Math.floor(Date.now()/1000);
             const candleDuration = currentResolution === 'D' ? 86400 : currentResolution * 60;
@@ -1721,27 +1741,34 @@
           });
           const candleSVG = `
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" app="ikonik" class="ikonik-mc3dr">
-                                  <path d="M7 16L12.25 10.75L15.75 14.25L21 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" app="ikonik" class="path-cy7k1"></path>
-                                  <path d="M21 21H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" app="ikonik" class="path-grztl"></path>
-                                  <path d="M3 3V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" app="ikonik" class="path-t2hxn"></path>
-                                </svg>
-`;
-
-const lineSVG = `
-<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 15 15" fill="none" app="ikonik" class="ikonik-9u3h3i-2">
-                                  <path d="M0.5 0V14.5H15M8.5 0V3.5M3.5 9.5V12M3.5 4V5.5M13.5 4V6.5M13.5 10.5V13M2.5 5.5H4.5V9.5H2.5V5.5ZM7.5 3.5H9.5V7.5H7.5V3.5ZM12.5 6.5H14.5V10.5H12.5V6.5Z" stroke="currentColor" app="ikonik" class="path-yz0y"></path>
-                                </svg>
-`;
-
-document.getElementById('chartTypeToggle').addEventListener('click', () => {
-  showCandles = !showCandles;
-  candleSeries.applyOptions({ visible: showCandles });
-  lineSeries.applyOptions({ visible: !showCandles });
-
-  const toggleBtn = document.getElementById('chartTypeToggle');
-  toggleBtn.innerHTML = showCandles ? lineSVG : candleSVG;
-});
-
+            <path d="M7 16L12.25 10.75L15.75 14.25L21 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" app="ikonik" class="path-cy7k1"></path>
+            <path d="M21 21H3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" app="ikonik" class="path-grztl"></path>
+            <path d="M3 3V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" app="ikonik" class="path-t2hxn"></path>
+          </svg>
+          `;
+          
+          const lineSVG = `
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 15 15" fill="none" app="ikonik" class="ikonik-9u3h3i-2">
+            <path d="M0.5 0V14.5H15M8.5 0V3.5M3.5 9.5V12M3.5 4V5.5M13.5 4V6.5M13.5 10.5V13M2.5 5.5H4.5V9.5H2.5V5.5ZM7.5 3.5H9.5V7.5H7.5V3.5ZM12.5 6.5H14.5V10.5H12.5V6.5Z" stroke="currentColor" app="ikonik" class="path-yz0y"></path>
+          </svg>
+          `;
+          
+          document.getElementById('chartTypeToggle').addEventListener('click', () => {
+            showCandles = !showCandles;
+            candleSeries.applyOptions({ visible: showCandles });
+            lineSeries.applyOptions({ visible: !showCandles });
+          
+            const toggleBtn = document.getElementById('chartTypeToggle');
+            toggleBtn.innerHTML = showCandles ? lineSVG : candleSVG;
+          });
+          
+          // Bouton de bascule du thème (sombre/clair)
+          document.getElementById('charttheme').addEventListener('click', () => {
+            isDarkTheme = !isDarkTheme;
+            initChart();
+            showNotification("Thème changé en " + (isDarkTheme ? "Sombre" : "Clair"));
+          });
+          
           window.addEventListener('resize', ()=>{
             const container = document.getElementById('chartContainer');
             if(chart) chart.resize(container.clientWidth, container.clientHeight);
@@ -1768,6 +1795,8 @@ document.getElementById('chartTypeToggle').addEventListener('click', () => {
           
         })();
       </script>
+      
+      
       
       
      <script>
@@ -2068,800 +2097,812 @@ document.getElementById('chartTypeToggle').addEventListener('click', () => {
       // Mise à jour initiale au chargement
       updatePrices();
     </script>
-    <script>
-        /************* CONFIGURATION DU CONTRAT *************/
-        let provider, signer, contract;
-        const contractAddress = "0xac51dd5ad45dc78661646f1e62aa0e8c60af086b";
-        const contractABI = [
-          {
-            "inputs": [{"internalType": "address","name": "trader","type": "address"}],
-            "name": "getTraderAllIds",
-            "outputs": [
-              {"internalType": "uint256[]","name": "openPositionIds","type": "uint256[]"},
-              {"internalType": "uint256[]","name": "closedPositionIds","type": "uint256[]"},
-              {"internalType": "uint256[]","name": "limitOrderIds","type": "uint256[]"}
-            ],
-            "stateMutability": "view",
-            "type": "function"
-          },
-          {
-            "inputs": [{"internalType": "uint256","name": "","type": "uint256"}],
-            "name": "positions",
-            "outputs": [
-              {"internalType": "uint256","name": "id","type": "uint256"},
-              {"internalType": "address","name": "trader","type": "address"},
-              {"internalType": "bool","name": "isShort","type": "bool"},
-              {"internalType": "uint256","name": "size","type": "uint256"},
-              {"internalType": "int256","name": "openPrice","type": "int256"},
-              {"internalType": "uint256","name": "timestamp","type": "uint256"},
-              {"internalType": "uint256","name": "openBlock","type": "uint256"},
-              {"internalType": "bytes32","name": "assetId","type": "bytes32"},
-              {"internalType": "uint256","name": "leverage","type": "uint256"}
-            ],
-            "stateMutability": "view",
-            "type": "function"
-          },
-          {
-            "inputs": [{"internalType": "uint256","name": "","type": "uint256"}],
-            "name": "closedPositions",
-            "outputs": [
-              {"internalType": "uint256","name": "id","type": "uint256"},
-              {"internalType": "address","name": "trader","type": "address"},
-              {"internalType": "bool","name": "isShort","type": "bool"},
-              {"internalType": "uint256","name": "size","type": "uint256"},
-              {"internalType": "int256","name": "openPrice","type": "int256"},
-              {"internalType": "int256","name": "closePrice","type": "int256"},
-              {"internalType": "uint256","name": "openTimestamp","type": "uint256"},
-              {"internalType": "uint256","name": "closeTimestamp","type": "uint256"},
-              {"internalType": "uint256","name": "openBlock","type": "uint256"},
-              {"internalType": "uint256","name": "closeBlock","type": "uint256"},
-              {"internalType": "bytes32","name": "assetId","type": "bytes32"},
-              {"internalType": "uint256","name": "finalAmount","type": "uint256"},
-              {"internalType": "int256","name": "profit","type": "int256"},
-              {"internalType": "uint256","name": "leverage","type": "uint256"},
-              {"internalType": "int256","name": "liquidationPrice","type": "int256"},
-              {"internalType": "int256","name": "stopLoss","type": "int256"},
-              {"internalType": "int256","name": "takeProfit","type": "int256"}
-            ],
-            "stateMutability": "view",
-            "type": "function"
-          },
-          {
-            "inputs": [{"internalType": "uint256","name": "","type": "uint256"}],
-            "name": "limitOrders",
-            "outputs": [
-              {"internalType": "uint256","name": "id","type": "uint256"},
-              {"internalType": "address","name": "trader","type": "address"},
-              {"internalType": "bool","name": "isShort","type": "bool"},
-              {"internalType": "uint256","name": "size","type": "uint256"},
-              {"internalType": "uint256","name": "leverage","type": "uint256"},
-              {"internalType": "bytes32","name": "assetId","type": "bytes32"},
-              {"internalType": "int256","name": "targetPrice","type": "int256"},
-              {"internalType": "int256","name": "stopLoss","type": "int256"},
-              {"internalType": "int256","name": "takeProfit","type": "int256"},
-              {"internalType": "uint256","name": "timestamp","type": "uint256"}
-            ],
-            "stateMutability": "view",
-            "type": "function"
-          },
-          {
-            "inputs": [{"internalType": "uint256","name": "","type": "uint256"}],
-            "name": "stopLosses",
-            "outputs": [{"internalType": "int256","name": "","type": "int256"}],
-            "stateMutability": "view",
-            "type": "function"
-          },
-          {
-            "inputs": [{"internalType": "uint256","name": "","type": "uint256"}],
-            "name": "takeProfits",
-            "outputs": [{"internalType": "int256","name": "","type": "int256"}],
-            "stateMutability": "view",
-            "type": "function"
-          },
-          {
-            "inputs": [{"internalType": "uint256","name": "","type": "uint256"}],
-            "name": "liquidationPrices",
-            "outputs": [{"internalType": "int256","name": "","type": "int256"}],
-            "stateMutability": "view",
-            "type": "function"
-          },
-          {
-            "inputs": [
-              {"internalType": "uint256","name": "positionId","type": "uint256"},
-              {"internalType": "int256","name": "newStopLoss","type": "int256"}
-            ],
-            "name": "updateStopLoss",
-            "outputs": [],
-            "stateMutability": "nonpayable",
-            "type": "function"
-          },
-          {
-            "inputs": [
-              {"internalType": "uint256","name": "positionId","type": "uint256"},
-              {"internalType": "int256","name": "newTakeProfit","type": "int256"}
-            ],
-            "name": "updateTakeProfit",
-            "outputs": [],
-            "stateMutability": "nonpayable",
-            "type": "function"
-          },
-          {
-            "inputs": [
-              {"internalType": "uint256","name": "positionId","type": "uint256"},
-              {"internalType": "bytes[]","name": "priceUpdate","type": "bytes[]"}
-            ],
-            "name": "closePosition",
-            "outputs": [
-              {"internalType": "uint256","name": "finalAmount","type": "uint256"},
-              {"internalType": "int256","name": "profit","type": "int256"}
-            ],
-            "stateMutability": "payable",
-            "type": "function"
-          },
-          {
-            "inputs": [
-              {"internalType": "uint256","name": "orderId","type": "uint256"}
-            ],
-            "name": "cancelLimitOrder",
-            "outputs": [],
-            "stateMutability": "nonpayable",
-            "type": "function"
-          },
-          {
-            "anonymous": false,
-            "inputs": [
-              {"indexed": true,"internalType": "uint256","name": "positionId","type": "uint256"},
-              {"indexed": true,"internalType": "address","name": "trader","type": "address"},
-              {"indexed": false,"internalType": "int256","name": "profit","type": "int256"},
-              {"indexed": false,"internalType": "uint256","name": "closingTimestamp","type": "uint256"}
-            ],
-            "name": "PositionClosed",
-            "type": "event"
-          },
-          {
-            "anonymous": false,
-            "inputs": [
-              {"indexed": true,"internalType": "uint256","name": "positionId","type": "uint256"},
-              {"indexed": true,"internalType": "address","name": "trader","type": "address"},
-              {"indexed": false,"internalType": "int256","name": "openPrice","type": "int256"},
-              {"indexed": false,"internalType": "int256","name": "liquidationPrice","type": "int256"},
-              {"indexed": false,"internalType": "uint256","name": "size","type": "uint256"},
-              {"indexed": false,"internalType": "bool","name": "isShort","type": "bool"},
-              {"indexed": false,"internalType": "uint256","name": "leverage","type": "uint256"},
-              {"indexed": false,"internalType": "int256","name": "stopLoss","type": "int256"},
-              {"indexed": false,"internalType": "int256","name": "takeProfit","type": "int256"}
-            ],
-            "name": "PositionOpened",
-            "type": "event"
-          },
-          {
-            "anonymous": false,
-            "inputs": [
-              {"indexed": true,"internalType": "uint256","name": "orderId","type": "uint256"},
-              {"indexed": true,"internalType": "address","name": "trader","type": "address"}
-            ],
-            "name": "LimitOrderCanceled",
-            "type": "event"
-          },
-          {
-            "anonymous": false,
-            "inputs": [
-              {"indexed": true,"internalType": "uint256","name": "orderId","type": "uint256"},
-              {"indexed": true,"internalType": "uint256","name": "positionId","type": "uint256"},
-              {"indexed": true,"internalType": "address","name": "trader","type": "address"},
-              {"indexed": false,"internalType": "int256","name": "executionPrice","type": "int256"}
-            ],
-            "name": "LimitOrderExecuted",
-            "type": "event"
-          }
-        ];
-      
-        /************* MAPPING DES ASSETS ET EXPOSANTS *************/
-        const assetMapping = {
-          "0x49f6b65cb1de6b10eaf75e7c03ca029c306d0357e91b5311b175084a5ad55688": { symbol: "AAPL", expo: -5 },
-          "0xb5d0e0fa58a1f8b81498ae670ce93c872d14434b72c364885d4fa1b257cbb07a": { symbol: "AMZN", expo: -5 },
-          "0xfee33f2a978bf32dd6b662b65ba8083c6773b494f8401194ec1870c640860245": { symbol: "COIN", expo: -5 },
-          "0xe65ff435be42630439c96396653a342829e877e2aafaeaf1a10d0ee5fd2cf3f2": { symbol: "GOOG", expo: -5 },
-          "0x6f9cd89ef1b7fd39f667101a91ad578b6c6ace4579d5f7f285a4b06aa4504be6": { symbol: "GME", expo: -5 },
-          "0xc1751e085ee292b8b3b9dd122a135614485a201c35dfc653553f0e28c1baf3ff": { symbol: "INTC", expo: -5 },
-          "0x9aa471dccea36b90703325225ac76189baf7e0cc286b8843de1de4f31f9caa7d": { symbol: "KO", expo: -5 },
-          "0xd3178156b7c0f6ce10d6da7d347952a672467b51708baaf1a57ffe1fb005824a": { symbol: "MCD", expo: -5 },
-          "0xd0ca23c1cc005e004ccf1db5bf76aeb6a49218f43dac3d4b275e92de12ded4d1": { symbol: "MSFT", expo: -5 },
-          "0x67649450b4ca4bfff97cbaf96d2fd9e40f6db148cb65999140154415e4378e14": { symbol: "NIKE", expo: -5 },
-          "0x78a3e3b8e676a8f73c439f5d749737034b139bbbe899ba5775216fba596607fe": { symbol: "NVDA", expo: -5 },
-          "0xb1073854ed24cbc755dc527418f52b7d271f6cc967bbf8d8129112b18860a593": { symbol: "META", expo: -5 },
-          "0x16dad506d7db8da01c87581c87ca897a012a153557d4d578c3b9c9e1bc0632f1": { symbol: "TSLA", expo: -5 },
-          "0x67a6f93030420c1c9e3fe37c1ab6b77966af82f995944a9fefce357a22854a80": { symbol: "AUDUSD", expo: -5 },
-          "0xa995d00bb36a63cef7fd2c287dc105fc8f3d93779f062f09551b0af3e81ec30b": { symbol: "EUR", expo: -5 },
-          "0x84c2dde9633d93d1bcad84e7dc41c9d56578b7ec52fabedc1f335d673df0a7c1": { symbol: "GBP", expo: -5 },
-          "0x92eea8ba1b00078cdc2ef6f64f091f262e8c7d0576ee4677572f314ebfafa4c7": { symbol: "NZD", expo: -5 },
-          "0x3112b03a41c910ed446852aacf67118cb1bec67b2cd0b9a214c58cc0eaa2ecca": { symbol: "CAD", expo: -5 },
-          "0x0b1e3297e69f162877b577b0d6a47a0d63b2392bc8499e6540da4187a63e28f8": { symbol: "CHF", expo: -5 },
-          "0xef2c98c804ba503c6a707e38be4dfbb16683775f195b091252bf24693042fd52": { symbol: "JPY", expo: -3 },
-          "0xf2fb02c32b055c805e7238d628e5e9dadef274376114eb1f012337cabe93871e": { symbol: "XAGUSD", expo: -5 },
-          "0x765d2ba906dbc32ca17cc11f5310a89e9ee1f6420508c63861f2f8ba4ee34bb2": { symbol: "XAU", expo: -3 },
-          "0x0bbf28e9a841a1cc788f6a361b17ca072d0ea3098a1e5df1c3922d06719579ff": { symbol: "PYTH", expo: -8 },
-          "0xff61491a931112ddf1bd8147cd1b641375f79f5825126d665480874634fd0ace": { symbol: "ETH", expo: -8 }
-        };
-      
-        /************* FORMATAGE DES PRIX *************/
-        function isForexAsset(symbol) {
-          const forexSymbols = ["EURUSD", "GBPUSD", "AUDUSD", "NZDUSD", "USDCAD", "USDCHF", "PYTH"];
-          return forexSymbols.includes(symbol);
-        }
-        function formatPrice(value, assetSymbol) {
-          return isForexAsset(assetSymbol) ? value.toFixed(4) : value.toFixed(2);
-        }
-        function profitFormat(value) {
-          return value.toFixed(2);
-        }
-        function usdcFormat(value) {
-          return value.toFixed(2);
-        }
-        function convertField(fieldLabel, value) {
-          const lowerLabel = fieldLabel.toLowerCase();
-          if (lowerLabel.includes("timestamp")) {
-            return formatTimestamp(value);
-          }
-          if (lowerLabel === "size" || lowerLabel === "finalamount") {
-            return usdcFormat(Number(ethers.utils.formatUnits(value, 6)));
-          }
-          if (lowerLabel === "profit") {
-            return Number(ethers.utils.formatUnits(value, 6)).toString();
-          }
-          if (lowerLabel === "isshort") {
-            return value ? "short" : "long";
-          }
-          if (lowerLabel === "assetid") {
-            const rawAssetId = value.toString();
-            return assetMapping[rawAssetId] ? assetMapping[rawAssetId].symbol : rawAssetId;
-          }
-          return value.toString();
-        }
-        function formatTimestamp(ts) {
-          const date = new Date(Number(ts) * 1000);
-          const dd = String(date.getDate()).padStart(2, '0');
-          const mm = String(date.getMonth() + 1).padStart(2, '0');
-          const yyyy = date.getFullYear();
-          const hh = String(date.getHours()).padStart(2, '0');
-          const min = String(date.getMinutes()).padStart(2, '0');
-          const ss = String(date.getSeconds()).padStart(2, '0');
-          return `${dd}-${mm}-${yyyy} at ${hh}:${min}:${ss}`;
-        }
-        function applyExpo(value, expo) {
-          return Number(value) * Math.pow(10, expo);
-        }
-        function applyExpoWithMapping(value, assetId) {
-          const expo = assetMapping[assetId] ? assetMapping[assetId].expo : 0;
-          return Number(value) * Math.pow(10, expo);
-        }
-      
-        /************* VARIABLES DE CACHE *************/
-        let cachedOpenPositions = [];
-        let cachedStopLosses = [];
-        let cachedTakeProfits = [];
-        let cachedLiquidationPrices = [];
-        let cachedClosedPositions = [];
-        let cachedLimitOrders = [];
-        let stopLossInputs = {};
-        let takeProfitInputs = {};
-        let livePrices = {}; // Utilisé pour le streaming
-      
-        /************* DÉTECTION DE SÉLECTION *************/
-        function isUserSelectingText() {
-          if (window.getSelection) {
-            const selection = window.getSelection();
-            return selection && selection.type === 'Range' && !selection.isCollapsed;
-          }
-          return false;
-        }
-      
-        /************* RENDU DES TABLES *************/
-        function renderTable(category, data, fields) {
-          let html = `<h3>${category} (${data.length})</h3>`;
-          data.forEach((item, index) => {
-            html += `<h4>${category} ${index}</h4>`;
-            html += '<table>';
-            fields.forEach((field, i) => {
-              const rawVal = item[i];
-              const fieldName = field.label;
-              let displayValue = convertField(fieldName, rawVal);
-              if (category === "Closed Positions") {
-                const assetId = item[10]?.toString() || "";
-                const assetSymbol = assetMapping[assetId] ? assetMapping[assetId].symbol : assetId;
-                if (["openPrice", "closePrice", "stopLoss", "takeProfit", "liquidationPrice"].includes(fieldName)) {
-                  const valWithExpo = applyExpoWithMapping(rawVal.toString(), assetId);
-                  if ((fieldName === "stopLoss" || fieldName === "takeProfit") && Number(valWithExpo) === 0) {
-                    displayValue = "No set";
-                  } else {
-                    displayValue = formatPrice(valWithExpo, assetSymbol);
-                  }
-                }
-                if (fieldName === "profit") {
-                  displayValue = profitFormat(Number(displayValue));
-                }
-              } else if (category === "Limit Orders") {
-                const assetId = item[5]?.toString() || "";
-                const assetSymbol = assetMapping[assetId] ? assetMapping[assetId].symbol : assetId;
-                if (["targetPrice", "stopLoss", "takeProfit"].includes(fieldName)) {
-                  const valWithExpo = applyExpoWithMapping(rawVal.toString(), assetId);
-                  if ((fieldName === "stopLoss" || fieldName === "takeProfit") && Number(valWithExpo) === 0) {
-                    displayValue = "No set";
-                  } else {
-                    displayValue = formatPrice(valWithExpo, assetSymbol);
-                  }
-                }
+<script>
+    /************* CONTRACT CONFIGURATION *************/
+    let provider, signer, contract;
+    const contractAddress = "0xac51dd5ad45dc78661646f1e62aa0e8c60af086b";
+    const contractABI = [
+      {
+        "inputs": [{"internalType": "address","name": "trader","type": "address"}],
+        "name": "getTraderAllIds",
+        "outputs": [
+          {"internalType": "uint256[]","name": "openPositionIds","type": "uint256[]"},
+          {"internalType": "uint256[]","name": "closedPositionIds","type": "uint256[]"},
+          {"internalType": "uint256[]","name": "limitOrderIds","type": "uint256[]"}
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [{"internalType": "uint256","name": "","type": "uint256"}],
+        "name": "positions",
+        "outputs": [
+          {"internalType": "uint256","name": "id","type": "uint256"},
+          {"internalType": "address","name": "trader","type": "address"},
+          {"internalType": "bool","name": "isShort","type": "bool"},
+          {"internalType": "uint256","name": "size","type": "uint256"},
+          {"internalType": "int256","name": "openPrice","type": "int256"},
+          {"internalType": "uint256","name": "timestamp","type": "uint256"},
+          {"internalType": "uint256","name": "openBlock","type": "uint256"},
+          {"internalType": "bytes32","name": "assetId","type": "bytes32"},
+          {"internalType": "uint256","name": "leverage","type": "uint256"}
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [{"internalType": "uint256","name": "","type": "uint256"}],
+        "name": "closedPositions",
+        "outputs": [
+          {"internalType": "uint256","name": "id","type": "uint256"},
+          {"internalType": "address","name": "trader","type": "address"},
+          {"internalType": "bool","name": "isShort","type": "bool"},
+          {"internalType": "uint256","name": "size","type": "uint256"},
+          {"internalType": "int256","name": "openPrice","type": "int256"},
+          {"internalType": "int256","name": "closePrice","type": "int256"},
+          {"internalType": "uint256","name": "openTimestamp","type": "uint256"},
+          {"internalType": "uint256","name": "closeTimestamp","type": "uint256"},
+          {"internalType": "uint256","name": "openBlock","type": "uint256"},
+          {"internalType": "uint256","name": "closeBlock","type": "uint256"},
+          {"internalType": "bytes32","name": "assetId","type": "bytes32"},
+          {"internalType": "uint256","name": "finalAmount","type": "uint256"},
+          {"internalType": "int256","name": "profit","type": "int256"},
+          {"internalType": "uint256","name": "leverage","type": "uint256"},
+          {"internalType": "int256","name": "liquidationPrice","type": "int256"},
+          {"internalType": "int256","name": "stopLoss","type": "int256"},
+          {"internalType": "int256","name": "takeProfit","type": "int256"}
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [{"internalType": "uint256","name": "","type": "uint256"}],
+        "name": "limitOrders",
+        "outputs": [
+          {"internalType": "uint256","name": "id","type": "uint256"},
+          {"internalType": "address","name": "trader","type": "address"},
+          {"internalType": "bool","name": "isShort","type": "bool"},
+          {"internalType": "uint256","name": "size","type": "uint256"},
+          {"internalType": "uint256","name": "leverage","type": "uint256"},
+          {"internalType": "bytes32","name": "assetId","type": "bytes32"},
+          {"internalType": "int256","name": "targetPrice","type": "int256"},
+          {"internalType": "int256","name": "stopLoss","type": "int256"},
+          {"internalType": "int256","name": "takeProfit","type": "int256"},
+          {"internalType": "uint256","name": "timestamp","type": "uint256"}
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [{"internalType": "uint256","name": "","type": "uint256"}],
+        "name": "stopLosses",
+        "outputs": [{"internalType": "int256","name": "","type": "int256"}],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [{"internalType": "uint256","name": "","type": "uint256"}],
+        "name": "takeProfits",
+        "outputs": [{"internalType": "int256","name": "","type": "int256"}],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [{"internalType": "uint256","name": "","type": "uint256"}],
+        "name": "liquidationPrices",
+        "outputs": [{"internalType": "int256","name": "","type": "int256"}],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {"internalType": "uint256","name": "positionId","type": "uint256"},
+          {"internalType": "int256","name": "newStopLoss","type": "int256"}
+        ],
+        "name": "updateStopLoss",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {"internalType": "uint256","name": "positionId","type": "uint256"},
+          {"internalType": "int256","name": "newTakeProfit","type": "int256"}
+        ],
+        "name": "updateTakeProfit",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {"internalType": "uint256","name": "positionId","type": "uint256"},
+          {"internalType": "bytes[]","name": "priceUpdate","type": "bytes[]"}
+        ],
+        "name": "closePosition",
+        "outputs": [
+          {"internalType": "uint256","name": "finalAmount","type": "uint256"},
+          {"internalType": "int256","name": "profit","type": "int256"}
+        ],
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {"internalType": "uint256","name": "orderId","type": "uint256"}
+        ],
+        "name": "cancelLimitOrder",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {"indexed": true,"internalType": "uint256","name": "positionId","type": "uint256"},
+          {"indexed": true,"internalType": "address","name": "trader","type": "address"},
+          {"indexed": false,"internalType": "int256","name": "profit","type": "int256"},
+          {"indexed": false,"internalType": "uint256","name": "closingTimestamp","type": "uint256"}
+        ],
+        "name": "PositionClosed",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {"indexed": true,"internalType": "uint256","name": "positionId","type": "uint256"},
+          {"indexed": true,"internalType": "address","name": "trader","type": "address"},
+          {"indexed": false,"internalType": "int256","name": "openPrice","type": "int256"},
+          {"indexed": false,"internalType": "int256","name": "liquidationPrice","type": "int256"},
+          {"indexed": false,"internalType": "uint256","name": "size","type": "uint256"},
+          {"indexed": false,"internalType": "bool","name": "isShort","type": "bool"},
+          {"indexed": false,"internalType": "uint256","name": "leverage","type": "uint256"},
+          {"indexed": false,"internalType": "int256","name": "stopLoss","type": "int256"},
+          {"indexed": false,"internalType": "int256","name": "takeProfit","type": "int256"}
+        ],
+        "name": "PositionOpened",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {"indexed": true,"internalType": "uint256","name": "orderId","type": "uint256"},
+          {"indexed": true,"internalType": "address","name": "trader","type": "address"}
+        ],
+        "name": "LimitOrderCanceled",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {"indexed": true,"internalType": "uint256","name": "orderId","type": "uint256"},
+          {"indexed": true,"internalType": "uint256","name": "positionId","type": "uint256"},
+          {"indexed": true,"internalType": "address","name": "trader","type": "address"},
+          {"indexed": false,"internalType": "int256","name": "executionPrice","type": "int256"}
+        ],
+        "name": "LimitOrderExecuted",
+        "type": "event"
+      }
+    ];
+  
+    /************* ASSET MAPPING AND EXPONENTS *************/
+    const assetMapping = {
+      "0x49f6b65cb1de6b10eaf75e7c03ca029c306d0357e91b5311b175084a5ad55688": { symbol: "AAPL", expo: -5 },
+      "0xb5d0e0fa58a1f8b81498ae670ce93c872d14434b72c364885d4fa1b257cbb07a": { symbol: "AMZN", expo: -5 },
+      "0xfee33f2a978bf32dd6b662b65ba8083c6773b494f8401194ec1870c640860245": { symbol: "COIN", expo: -5 },
+      "0xe65ff435be42630439c96396653a342829e877e2aafaeaf1a10d0ee5fd2cf3f2": { symbol: "GOOG", expo: -5 },
+      "0x6f9cd89ef1b7fd39f667101a91ad578b6c6ace4579d5f7f285a4b06aa4504be6": { symbol: "GME", expo: -5 },
+      "0xc1751e085ee292b8b3b9dd122a135614485a201c35dfc653553f0e28c1baf3ff": { symbol: "INTC", expo: -5 },
+      "0x9aa471dccea36b90703325225ac76189baf7e0cc286b8843de1de4f31f9caa7d": { symbol: "KO", expo: -5 },
+      "0xd3178156b7c0f6ce10d6da7d347952a672467b51708baaf1a57ffe1fb005824a": { symbol: "MCD", expo: -5 },
+      "0xd0ca23c1cc005e004ccf1db5bf76aeb6a49218f43dac3d4b275e92de12ded4d1": { symbol: "MSFT", expo: -5 },
+      "0x67649450b4ca4bfff97cbaf96d2fd9e40f6db148cb65999140154415e4378e14": { symbol: "NIKE", expo: -5 },
+      "0x78a3e3b8e676a8f73c439f5d749737034b139bbbe899ba5775216fba596607fe": { symbol: "NVDA", expo: -5 },
+      "0xb1073854ed24cbc755dc527418f52b7d271f6cc967bbf8d8129112b18860a593": { symbol: "META", expo: -5 },
+      "0x16dad506d7db8da01c87581c87ca897a012a153557d4d578c3b9c9e1bc0632f1": { symbol: "TSLA", expo: -5 },
+      "0x67a6f93030420c1c9e3fe37c1ab6b77966af82f995944a9fefce357a22854a80": { symbol: "AUDUSD", expo: -5 },
+      "0xa995d00bb36a63cef7fd2c287dc105fc8f3d93779f062f09551b0af3e81ec30b": { symbol: "EUR", expo: -5 },
+      "0x84c2dde9633d93d1bcad84e7dc41c9d56578b7ec52fabedc1f335d673df0a7c1": { symbol: "GBP", expo: -5 },
+      "0x92eea8ba1b00078cdc2ef6f64f091f262e8c7d0576ee4677572f314ebfafa4c7": { symbol: "NZD", expo: -5 },
+      "0x3112b03a41c910ed446852aacf67118cb1bec67b2cd0b9a214c58cc0eaa2ecca": { symbol: "CAD", expo: -5 },
+      "0x0b1e3297e69f162877b577b0d6a47a0d63b2392bc8499e6540da4187a63e28f8": { symbol: "CHF", expo: -5 },
+      "0xef2c98c804ba503c6a707e38be4dfbb16683775f195b091252bf24693042fd52": { symbol: "JPY", expo: -3 },
+      "0xf2fb02c32b055c805e7238d628e5e9dadef274376114eb1f012337cabe93871e": { symbol: "XAGUSD", expo: -5 },
+      "0x765d2ba906dbc32ca17cc11f5310a89e9ee1f6420508c63861f2f8ba4ee34bb2": { symbol: "XAU", expo: -3 },
+      "0x0bbf28e9a841a1cc788f6a361b17ca072d0ea3098a1e5df1c3922d06719579ff": { symbol: "PYTH", expo: -8 },
+      "0xff61491a931112ddf1bd8147cd1b641375f79f5825126d665480874634fd0ace": { symbol: "ETH", expo: -8 }
+    };
+  
+    /************* PRICE FORMATTING *************/
+    function isForexAsset(symbol) {
+      const forexSymbols = ["EURUSD", "GBPUSD", "AUDUSD", "NZDUSD", "USDCAD", "USDCHF", "PYTH"];
+      return forexSymbols.includes(symbol);
+    }
+    function formatPrice(value, assetSymbol) {
+      return isForexAsset(assetSymbol) ? value.toFixed(4) : value.toFixed(2);
+    }
+    function profitFormat(value) {
+      return value.toFixed(2);
+    }
+    function usdcFormat(value) {
+      return value.toFixed(2);
+    }
+    function convertField(fieldLabel, value) {
+      const lowerLabel = fieldLabel.toLowerCase();
+      if (lowerLabel.includes("timestamp")) {
+        return formatTimestamp(value);
+      }
+      if (lowerLabel === "size" || lowerLabel === "finalamount") {
+        return usdcFormat(Number(ethers.utils.formatUnits(value, 6)));
+      }
+      if (lowerLabel === "profit") {
+        return Number(ethers.utils.formatUnits(value, 6)).toString();
+      }
+      if (lowerLabel === "isshort") {
+        return value ? "short" : "long";
+      }
+      if (lowerLabel === "assetid") {
+        const rawAssetId = value.toString();
+        return assetMapping[rawAssetId] ? assetMapping[rawAssetId].symbol : rawAssetId;
+      }
+      return value.toString();
+    }
+    function formatTimestamp(ts) {
+      const date = new Date(Number(ts) * 1000);
+      const dd = String(date.getDate()).padStart(2, '0');
+      const mm = String(date.getMonth() + 1).padStart(2, '0');
+      const yyyy = date.getFullYear();
+      const hh = String(date.getHours()).padStart(2, '0');
+      const min = String(date.getMinutes()).padStart(2, '0');
+      const ss = String(date.getSeconds()).padStart(2, '0');
+      return `${dd}-${mm}-${yyyy} at ${hh}:${min}:${ss}`;
+    }
+    function applyExpo(value, expo) {
+      return Number(value) * Math.pow(10, expo);
+    }
+    function applyExpoWithMapping(value, assetId) {
+      const expo = assetMapping[assetId] ? assetMapping[assetId].expo : 0;
+      return Number(value) * Math.pow(10, expo);
+    }
+  
+    /************* CACHE VARIABLES *************/
+    let cachedOpenPositions = [];
+    let cachedStopLosses = [];
+    let cachedTakeProfits = [];
+    let cachedLiquidationPrices = [];
+    let cachedClosedPositions = [];
+    let cachedLimitOrders = [];
+    let stopLossInputs = {};
+    let takeProfitInputs = {};
+    let livePrices = {}; // Used for streaming
+  
+    /************* TEXT SELECTION DETECTION *************/
+    function isUserSelectingText() {
+      if (window.getSelection) {
+        const selection = window.getSelection();
+        return selection && selection.type === 'Range' && !selection.isCollapsed;
+      }
+      return false;
+    }
+  
+    /************* NOTIFICATION FUNCTION *************/
+    // Displays a custom notification message in the div with ID "notification"
+    function showNotification(message) {
+      const notificationDiv = document.getElementById('notification');
+      notificationDiv.innerText = message;
+      notificationDiv.style.display = 'block';
+      // Hide notification after 3 seconds
+      setTimeout(() => {
+        notificationDiv.style.display = 'none';
+      }, 3000);
+    }
+  
+    /************* RENDERING TABLES *************/
+    function renderTable(category, data, fields) {
+      let html = `<h3>${category} (${data.length})</h3>`;
+      data.forEach((item, index) => {
+        html += `<h4>${category} ${index}</h4>`;
+        html += '<table>';
+        fields.forEach((field, i) => {
+          const rawVal = item[i];
+          const fieldName = field.label;
+          let displayValue = convertField(fieldName, rawVal);
+          if (category === "Closed Positions") {
+            const assetId = item[10]?.toString() || "";
+            const assetSymbol = assetMapping[assetId] ? assetMapping[assetId].symbol : assetId;
+            if (["openPrice", "closePrice", "stopLoss", "takeProfit", "liquidationPrice"].includes(fieldName)) {
+              const valWithExpo = applyExpoWithMapping(rawVal.toString(), assetId);
+              if ((fieldName === "stopLoss" || fieldName === "takeProfit") && Number(valWithExpo) === 0) {
+                displayValue = "Not set";
+              } else {
+                displayValue = formatPrice(valWithExpo, assetSymbol);
               }
-              html += `<tr>
-                         <td>${i}: ${field.type} - ${field.label}</td>
-                         <td>${displayValue}</td>
-                       </tr>`;
-            });
-            if (category === "Limit Orders") {
-              const rawAssetId = item[5].toString();
-              const assetSymbol = assetMapping[rawAssetId] ? assetMapping[rawAssetId].symbol : rawAssetId;
-              const currentPrice = (livePrices[rawAssetId] && livePrices[rawAssetId].currentPrice)
-                                    ? livePrices[rawAssetId].currentPrice
-                                    : 0;
-              const currentPriceFormatted = formatPrice(currentPrice, assetSymbol);
-              html += `<tr><td>Current Price (USDC)</td><td>${currentPriceFormatted}</td></tr>`;
-              html += `<tr>
-                         <td colspan="2">
-                           <button onclick="cancelLimitOrder(${item[0]})">Cancel Limit Order</button>
-                         </td>
-                       </tr>`;
             }
-            html += '</table>';
-          });
-          return html;
-        }
-      
-        function renderOpenPosition(position, stopLoss, takeProfit, liquidationPrice) {
-  const id = convertField("id", position[0]);
-  const rawAssetId = position[7].toString();
-  const assetData = assetMapping[rawAssetId] || { symbol: rawAssetId, expo: 0 };
-  const assetName = assetData.symbol;
-  const expo = assetData.expo;
-  const openPriceConverted = applyExpoWithMapping(position[4].toString(), rawAssetId);
-  const stopLossConverted = applyExpoWithMapping(stopLoss.toString(), rawAssetId);
-  const takeProfitConverted = applyExpoWithMapping(takeProfit.toString(), rawAssetId);
-  const liquidationPriceConverted = applyExpoWithMapping(liquidationPrice.toString(), rawAssetId);
-  const openPriceFormatted = formatPrice(openPriceConverted, assetName);
-  const currentPriceFormatted = (livePrices[rawAssetId] && livePrices[rawAssetId].currentPrice)
-                                  ? formatPrice(livePrices[rawAssetId].currentPrice, assetName)
-                                  : formatPrice(0, assetName);
-  const stopLossFormatted = Number(stopLossConverted) === 0 ? "No set" : formatPrice(stopLossConverted, assetName);
-  const takeProfitFormatted = Number(takeProfitConverted) === 0 ? "No set" : formatPrice(takeProfitConverted, assetName);
-  const liquidationFormatted = formatPrice(liquidationPriceConverted, assetName);
-  const sizeUSDC = Number(ethers.utils.formatUnits(position[3], 6));
-  const leverage = Number(position[8].toString());
-  const notionalValue = sizeUSDC * leverage;
-  const lotSize = notionalValue / openPriceConverted;
-  const isShort = position[2];
-  const currentPrice = (livePrices[rawAssetId] && livePrices[rawAssetId].currentPrice)
-                           ? livePrices[rawAssetId].currentPrice
-                           : openPriceConverted;
-  const profitUSDC = isShort
-                        ? (openPriceConverted - currentPrice) * lotSize
-                        : (currentPrice - openPriceConverted) * lotSize;
-  const profitPercent = (profitUSDC / notionalValue) * 100;
-  
-  // Calcul des placeholders en fonction du type de position
-  let takeProfitPlaceholder, stopLossPlaceholder;
-  if (!isShort) {
-    // Position long : TP à 110% et SL à 90%
-    takeProfitPlaceholder = formatPrice(openPriceConverted * 1.10, assetName);
-    stopLossPlaceholder = formatPrice(openPriceConverted * 0.90, assetName);
-  } else {
-    // Position short : TP à 90% et SL à 110%
-    takeProfitPlaceholder = formatPrice(openPriceConverted * 0.90, assetName);
-    stopLossPlaceholder = formatPrice(openPriceConverted * 1.10, assetName);
-  }
-  
-  // Récupération des valeurs entrées (si elles existent)
-  const stopLossVal = stopLossInputs[id] || "";
-  const takeProfitVal = takeProfitInputs[id] || "";
-  
-  // Application du style pour le type de position (affichage de "Long" ou "Short" avec couleur)
-  const isShortHtml = isShort 
-                        ? `<span class="price-down">${convertField("isShort", position[2])}</span>`
-                        : `<span class="price-up">${convertField("isShort", position[2])}</span>`;
-  
-  // Style conditionnel pour le profit (intégrant le % dans le span)
-  const profitUSDCHtml = profitUSDC > 0 
-                           ? `<span class="price-up">${usdcFormat(profitUSDC)}</span>`
-                           : (profitUSDC < 0 
-                                ? `<span class="price-down">${usdcFormat(profitUSDC)}</span>`
-                                : usdcFormat(profitUSDC));
-  const profitPercentHtml = profitPercent > 0 
-                              ? `<span class="price-up">${profitPercent.toFixed(2)} %</span>`
-                              : (profitPercent < 0 
-                                   ? `<span class="price-down">${profitPercent.toFixed(2)} %</span>`
-                                   : `<span>${profitPercent.toFixed(2)} %</span>`);
-  
-  let html = `<div class="div-block-499">
-    <div class="div-block-507">
-      <div class="div-block-514">
-        <div class="div-block-523">
-          <div class="div-block-517">
-            <div class="text-block-253">${assetName}</div>
-            <div class="text-block-195">/USDT</div>
-          </div>
-          <div class="text-block-263">${isShortHtml}</div>
-        </div>
-      </div>
-      <div class="div-block-497">
-        <div>
-          <div class="text-block-260">Position PNL(USDT)</div>
-          <div class="text-block-254">${profitUSDCHtml}</div>
-          <div class="text-block-252">
-            <strong></strong>
-          </div>
-        </div>
-        <div id="w-node-f5a3995e-64f5-4116-b75b-7e0efaf72c36-1f521c30" class="div-block-528">
-          <div class="text-block-246">PNL</div>
-          <div class="text-block-248">${profitPercentHtml}</div>
-        </div>
-        <div>
-          <div class="text-block-257">Open date </div>
-          <div class="text-block-268">${convertField("timestamp", position[5])}</div>
-        </div>
-      </div>
-      <div class="div-block-503">
-        <div class="div-block-518">
-          <div class="text-block-259">Entry Price</div>
-          <div class="text-block-265">${openPriceFormatted}</div>
-        </div>
-        <div class="div-block-530">
-          <div class="text-block-264">Liquidation Price</div>
-          <div class="text-block-251">${liquidationFormatted}</div>
-        </div>
-        <div class="div-block-527">
-          <div class="text-block-261">Market Price</div>
-          <div class="text-block-258">${currentPriceFormatted}</div>
-        </div>
-      </div>
-      <div class="div-block-506">
-        <div>
-          <div class="text-block-259">Quantity (${assetName})</div>
-          <div class="text-block-265">${lotSize.toFixed(8)}</div>
-        </div>
-        <div>
-          <div class="text-block-249">Margin (USDT)</div>
-          <div class="text-block-265">${usdcFormat(notionalValue)}</div>
-          <div class="text-block-252">
-            <strong></strong>
-          </div>
-        </div>
-        <div class="div-block-519">
-          <div class="text-block-267">Leverage</div>
-          <div class="text-block-265">
-            <strong class="bold-text-18">${leverage}</strong>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="div-block-502">
-      <div class="div-block-521">
-        <div class="div-block-500">
-          <div class="text-block-247">Take profit : </div>
-          <div class="text-block-247">${takeProfitFormatted}</div>
-        </div>
-        <div class="div-block-529">
-          <div class="div-block-524">
-            <input class="text-field-18 w-input" maxlength="256" name="Set-new-one-3" type="number" id="takeProfitInput-${id}" placeholder="${takeProfitPlaceholder}" data-expo="${expo}"
-              value="${takeProfitVal}" oninput="takeProfitInputs['${id}'] = this.value" onblur="updatePositionsDisplay()" />
-            <div class="div-block-508">
-              <a href="#" class="button-113 w-button" onclick="increaseInput('takeProfitInput-${id}', 1)">△</a>
-              <a href="#" class="button-115 w-button" onclick="decreaseInput('takeProfitInput-${id}', 1)">▽</a>
-            </div>
-          </div>
-          <a id="w-node-f5a3995e-64f5-4116-b75b-7e0efaf72c77-1f521c30" href="#" class="button-112 w-button" onclick="updateTakeProfit(${id}, '${rawAssetId}', ${expo})">Set</a>
-        </div>
-      </div>
-      <div class="div-block-521">
-        <div class="div-block-500">
-          <div class="text-block-247">Stop Loss : </div>
-          <div class="text-block-247">${stopLossFormatted}</div>
-        </div>
-        <div class="div-block-529">
-          <div class="div-block-524">
-            <input class="text-field-18 w-input" type="number" id="stopLossInput-${id}" placeholder="${stopLossPlaceholder}" data-expo="${expo}"
-              value="${stopLossVal}" oninput="stopLossInputs['${id}'] = this.value" onblur="updatePositionsDisplay()" required />
-            <div class="div-block-508">
-              <a href="#" class="button-113 w-button" onclick="increaseInput('stopLossInput-${id}', 1)">△</a>
-              <a href="#" class="button-115 w-button" onclick="decreaseInput('stopLossInput-${id}', 1)">▽</a>
-            </div>
-          </div>
-          <a id="w-node-f5a3995e-64f5-4116-b75b-7e0efaf72c90-1f521c30" href="#" class="button-112 w-button" onclick="updateStopLoss(${id}, '${rawAssetId}', ${expo})">Set</a>
-        </div>
-      </div>
-      <a id="w-node-f5a3995e-64f5-4116-b75b-7e0efaf72c98-1f521c30" href="#" class="button-114 w-button" onclick="closePosition(${id}, '${rawAssetId}')">Close On Market</a>
-    </div>
-  </div>`;
-  return html;
-}
-
-
-      
-        /************* FONCTIONS D'AJUSTEMENT DES INPUTS *************/
-        function increaseInput(inputId, amount) {
-          const inputElem = document.getElementById(inputId);
-          let currentValue = parseFloat(inputElem.value) || 0;
-          inputElem.value = currentValue + amount;
-          if (inputId.startsWith("stopLossInput-")) {
-            stopLossInputs[inputId.replace("stopLossInput-", "")] = inputElem.value;
-          } else if (inputId.startsWith("takeProfitInput-")) {
-            takeProfitInputs[inputId.replace("takeProfitInput-", "")] = inputElem.value;
-          }
-        }
-        function decreaseInput(inputId, amount) {
-          const inputElem = document.getElementById(inputId);
-          let currentValue = parseFloat(inputElem.value) || 0;
-          inputElem.value = currentValue - amount;
-          if (inputId.startsWith("stopLossInput-")) {
-            stopLossInputs[inputId.replace("stopLossInput-", "")] = inputElem.value;
-          } else if (inputId.startsWith("takeProfitInput-")) {
-            takeProfitInputs[inputId.replace("takeProfitInput-", "")] = inputElem.value;
-          }
-        }
-      
-        /************* FONCTION DE STREAMING *************/
-        function initPriceStream(assetId) {
-          if (livePrices[assetId] && livePrices[assetId].eventSource) return;
-          const streamUrl = `https://hermes.pyth.network/v2/updates/price/stream?ids[]=${assetId}`;
-          const eventSource = new EventSource(streamUrl);
-          eventSource.onmessage = (e) => {
-            try {
-              const data = JSON.parse(e.data);
-              const parsed = data.parsed[0];
-              livePrices[assetId] = {
-                currentPrice: Number(parsed.price.price) * Math.pow(10, parsed.price.expo),
-                expo: Number(parsed.price.expo),
-                eventSource: eventSource
-              };
-              updatePositionsDisplay();
-            } catch (error) {
-              console.error('Erreur lors du parsing du flux pour asset', assetId, error);
+            if (fieldName === "profit") {
+              displayValue = profitFormat(Number(displayValue));
             }
-          };
-          eventSource.onerror = (err) => {
-            console.error("Erreur de connexion au flux pour asset", assetId, err);
-          };
-          livePrices[assetId] = { currentPrice: 0, expo: 0, eventSource: eventSource };
-        }
-      
-        /************* MISE À JOUR DE L'AFFICHAGE *************/
-        function updatePositionsDisplay() {
-          if (isUserSelectingText()) return;
-          const activeElem = document.activeElement;
-          if (activeElem && activeElem.id &&
-             (activeElem.id.startsWith("stopLossInput-") || activeElem.id.startsWith("takeProfitInput-"))) {
-            return;
-          }
-          
-          // Mise à jour des compteurs dynamiques
-          document.getElementById("openPositionsCount").textContent = cachedOpenPositions.length;
-          document.getElementById("closedPositionsCount").textContent = cachedClosedPositions.length;
-          document.getElementById("limitOrdersCount").textContent = cachedLimitOrders.length;
-          
-          // Construction de l'affichage pour les positions ouvertes
-          let htmlOpenPositions = "";
-          cachedOpenPositions.forEach((position, index) => {
-            const rawAssetId = position[7].toString();
-            initPriceStream(rawAssetId);
-            htmlOpenPositions += renderOpenPosition(
-              position,
-              cachedStopLosses[index],
-              cachedTakeProfits[index],
-              cachedLiquidationPrices[index]
-            );
-          });
-      
-          // Construction de l'affichage pour les positions fermées
-          let htmlClosedPositions = "";
-          cachedClosedPositions.forEach((position) => {
-            const assetId = position[10].toString();
-            const assetData = assetMapping[assetId] || { symbol: assetId, expo: 0 };
-            const assetSymbol = assetData.symbol;
-            const expo = assetData.expo;
-            const openPriceConverted = applyExpoWithMapping(position[4].toString(), assetId);
-            const openPriceFormatted = formatPrice(openPriceConverted, assetSymbol);
-            const closePriceConverted = applyExpoWithMapping(position[5].toString(), assetId);
-            const closePriceFormatted = formatPrice(closePriceConverted, assetSymbol);
-            const leverage = Number(position[13].toString());
-            const sizeUSDC = Number(ethers.utils.formatUnits(position[3], 6));
-            const finalAmount = Number(ethers.utils.formatUnits(position[11], 6));
-            const profit = convertField("profit", position[12]);
-            const profitPercent = sizeUSDC > 0 ? ((finalAmount - sizeUSDC) / sizeUSDC) * 100 : 0;
-            htmlClosedPositions += `<div class="div-block-498">
-              <div class="text-block-250">${assetSymbol}/USDT</div>
-              <div class="text-block-250">${convertField("isShort", position[2])},</div>
-              <div class="text-block-250">${usdcFormat(sizeUSDC)}</div>
-              <div class="text-block-250">${openPriceFormatted}</div>
-              <div class="text-block-250">${closePriceFormatted}</div>
-              <div class="text-block-250">
-                <strong class="bold-text-18">×${leverage}</strong>
-              </div>
-              <div id="w-node-f5a3995e-64f5-4116-b75b-7e0efaf72cb8-1f521c30" class="text-block-250">
-                ${profit} (${profitPercent.toFixed(2)}%)
-              </div>
-            </div>`;
-          });
-      
-          // Construction de l'affichage pour les ordres limites
-          let htmlLimitOrders = "";
-          cachedLimitOrders.forEach((order) => {
-            const assetId = order[5].toString();
-            const assetData = assetMapping[assetId] || { symbol: assetId, expo: 0 };
-            const assetSymbol = assetData.symbol;
-            const targetPriceConverted = applyExpoWithMapping(order[6].toString(), assetId);
-            const targetPriceFormatted = formatPrice(targetPriceConverted, assetSymbol);
-            const currentPriceFormattedOrder = (livePrices[assetId] && livePrices[assetId].currentPrice)
-              ? formatPrice(livePrices[assetId].currentPrice, assetSymbol)
-              : formatPrice(0, assetSymbol);
-            const sizeUSDC = Number(ethers.utils.formatUnits(order[3], 6));
-            const leverage = order[4].toString();
-          
-            htmlLimitOrders += `
-              <div class="div-block-513">
-                <div class="ordertext">${assetSymbol}/USD</div>
-                <div class="ordertext">${convertField("isShort", order[2])}</div>
-                <div class="ordertext">${targetPriceFormatted}</div>
-                <div class="ordertext">${currentPriceFormattedOrder}</div>
-                <div class="ordertext">${usdcFormat(sizeUSDC)}</div>
-                <div class="ordertext">${order[0].toString()}</div>
-                <div class="ordertext">${leverage}</div>
-                <a href="#" class="button-110 w-button" onclick="cancelLimitOrder(${order[0]})">
-                  Cancel Order
-                </a>
-              </div>
-            `;
-          });
-      
-          // Injection du HTML dans les conteneurs correspondants
-          document.getElementById("openPositionsContainer").innerHTML = htmlOpenPositions;
-          document.getElementById("closedPositionsContainer").innerHTML = htmlClosedPositions;
-          document.getElementById("limitOrdersContainer").innerHTML = htmlLimitOrders;
-        }
-      
-        /************* INTERACTIONS AVEC LE CONTRAT *************/
-        async function connect() {
-          if (typeof window.ethereum !== 'undefined') {
-            try {
-              await ethereum.request({ method: 'eth_requestAccounts' });
-              provider = new ethers.providers.Web3Provider(window.ethereum);
-              signer = provider.getSigner();
-              const address = await signer.getAddress();
-              document.getElementById('wallet-address').innerText =   address;
-              contract = new ethers.Contract(contractAddress, contractABI, signer);
-              contract.on("PositionOpened", () => { fetchPositions(); });
-              contract.on("PositionClosed", () => { fetchPositions(); });
-              contract.on("LimitOrderCanceled", () => { fetchPositions(); });
-              contract.on("LimitOrderExecuted", () => { fetchPositions(); });
-              fetchPositions();
-            } catch (error) {
-              console.error("Erreur lors de la connexion :", error);
+          } else if (category === "Limit Orders") {
+            const assetId = item[5]?.toString() || "";
+            const assetSymbol = assetMapping[assetId] ? assetMapping[assetId].symbol : assetId;
+            if (["targetPrice", "stopLoss", "takeProfit"].includes(fieldName)) {
+              const valWithExpo = applyExpoWithMapping(rawVal.toString(), assetId);
+              if ((fieldName === "stopLoss" || fieldName === "takeProfit") && Number(valWithExpo) === 0) {
+                displayValue = "Not set";
+              } else {
+                displayValue = formatPrice(valWithExpo, assetSymbol);
+              }
             }
-          } else {
-            alert("MetaMask n'est pas installé. Veuillez l'installer et réessayer.");
           }
-        }
-      
-        async function fetchPositions() {
-          if (!contract) {
-            alert("Veuillez d'abord connecter votre wallet.");
-            return;
-          }
-          try {
-            const traderAddress = await signer.getAddress();
-            const ids = await contract.getTraderAllIds(traderAddress);
-            const openPositionIds = ids[0];
-            const closedPositionIds = ids[1];
-            const limitOrderIds = ids[2];
-      
-            const openPositions = await Promise.all(
-              openPositionIds.map(id => contract.positions(id))
-            );
-            const closedPositions = await Promise.all(
-              closedPositionIds.map(id => contract.closedPositions(id))
-            );
-            const limitOrders = await Promise.all(
-              limitOrderIds.map(id => contract.limitOrders(id))
-            );
-            const stopLosses = await Promise.all(
-              openPositionIds.map(id => contract.stopLosses(id))
-            );
-            const takeProfits = await Promise.all(
-              openPositionIds.map(id => contract.takeProfits(id))
-            );
-            const liquidationPrices = await Promise.all(
-              openPositionIds.map(id => contract.liquidationPrices(id))
-            );
-      
-            cachedOpenPositions = openPositions;
-            cachedStopLosses = stopLosses;
-            cachedTakeProfits = takeProfits;
-            cachedLiquidationPrices = liquidationPrices;
-            cachedClosedPositions = closedPositions;
-            cachedLimitOrders = limitOrders;
-      
-            openPositions.forEach(position => {
-              const rawAssetId = position[7].toString();
-              initPriceStream(rawAssetId);
-            });
-            limitOrders.forEach(order => {
-              const rawAssetId = order[5].toString();
-              initPriceStream(rawAssetId);
-            });
-      
-            updatePositionsDisplay();
-          } catch (error) {
-            console.error("Erreur lors de la récupération des positions :", error);
-          }
-        }
-      
-        async function updateStopLoss(positionId, assetId, expo) {
-          const inputElem = document.getElementById(`stopLossInput-${positionId}`);
-          const userValue = Number(inputElem.value);
-          const newStopLoss = userValue * Math.pow(10, -expo);
-          try {
-            const tx = await contract.updateStopLoss(positionId, newStopLoss);
-            await tx.wait();
-            alert(`Stop Loss de la position ${positionId} mis à jour avec succès.`);
-            fetchPositions();
-          } catch (error) {
-            console.error("Erreur lors de la mise à jour du Stop Loss:", error);
-          }
-        }
-      
-        async function updateTakeProfit(positionId, assetId, expo) {
-          const inputElem = document.getElementById(`takeProfitInput-${positionId}`);
-          const userValue = Number(inputElem.value);
-          const newTakeProfit = userValue * Math.pow(10, -expo);
-          try {
-            const tx = await contract.updateTakeProfit(positionId, newTakeProfit);
-            await tx.wait();
-            alert(`Take Profit de la position ${positionId} mis à jour avec succès.`);
-            fetchPositions();
-          } catch (error) {
-            console.error("Erreur lors de la mise à jour du Take Profit:", error);
-          }
-        }
-      
-        async function closePosition(positionId, assetId) {
-          try {
-            const response = await fetch(`https://hermes.pyth.network/v2/updates/price/latest?ids[]=${assetId}`);
-            const json = await response.json();
-            let priceUpdateHex = json.binary.data[0];
-            if (!priceUpdateHex.startsWith("0x")) {
-              priceUpdateHex = "0x" + priceUpdateHex;
-            }
-            const priceUpdateArray = [priceUpdateHex];
-            const tx = await contract.closePosition(positionId, priceUpdateArray, { value: 0 });
-            await tx.wait();
-            alert(`Position ${positionId} fermée avec succès.`);
-            fetchPositions();
-          } catch (error) {
-            console.error("Erreur lors de la fermeture de la position:", error);
-          }
-        }
-      
-        async function cancelLimitOrder(orderId) {
-          try {
-            const tx = await contract.cancelLimitOrder(orderId);
-            await tx.wait();
-            alert(`Ordre limite ${orderId} annulé avec succès.`);
-            fetchPositions();
-          } catch (error) {
-            console.error("Erreur lors de l'annulation de l'ordre limite:", error);
-          }
-        }
-      
-        document.addEventListener("DOMContentLoaded", () => {
-          updatePositionsDisplay();
+          html += `<tr>
+                     <td>${i}: ${field.type} - ${field.label}</td>
+                     <td>${displayValue}</td>
+                   </tr>`;
         });
-      </script>
+        if (category === "Limit Orders") {
+          const rawAssetId = item[5].toString();
+          const assetSymbol = assetMapping[rawAssetId] ? assetMapping[rawAssetId].symbol : rawAssetId;
+          const currentPrice = (livePrices[rawAssetId] && livePrices[rawAssetId].currentPrice)
+                                ? livePrices[rawAssetId].currentPrice
+                                : 0;
+          const currentPriceFormatted = formatPrice(currentPrice, assetSymbol);
+          html += `<tr><td>Current Price (USDC)</td><td>${currentPriceFormatted}</td></tr>`;
+          html += `<tr>
+                     <td colspan="2">
+                       <button onclick="cancelLimitOrder(${item[0]})">Cancel Limit Order</button>
+                     </td>
+                   </tr>`;
+        }
+        html += '</table>';
+      });
+      return html;
+    }
+  
+    function renderOpenPosition(position, stopLoss, takeProfit, liquidationPrice) {
+      const id = convertField("id", position[0]);
+      const rawAssetId = position[7].toString();
+      const assetData = assetMapping[rawAssetId] || { symbol: rawAssetId, expo: 0 };
+      const assetName = assetData.symbol;
+      const expo = assetData.expo;
+      const openPriceConverted = applyExpoWithMapping(position[4].toString(), rawAssetId);
+      const stopLossConverted = applyExpoWithMapping(stopLoss.toString(), rawAssetId);
+      const takeProfitConverted = applyExpoWithMapping(takeProfit.toString(), rawAssetId);
+      const liquidationPriceConverted = applyExpoWithMapping(liquidationPrice.toString(), rawAssetId);
+      const openPriceFormatted = formatPrice(openPriceConverted, assetName);
+      const currentPriceFormatted = (livePrices[rawAssetId] && livePrices[rawAssetId].currentPrice)
+                                    ? formatPrice(livePrices[rawAssetId].currentPrice, assetName)
+                                    : formatPrice(0, assetName);
+      const stopLossFormatted = Number(stopLossConverted) === 0 ? "Not set" : formatPrice(stopLossConverted, assetName);
+      const takeProfitFormatted = Number(takeProfitConverted) === 0 ? "Not set" : formatPrice(takeProfitConverted, assetName);
+      const liquidationFormatted = formatPrice(liquidationPriceConverted, assetName);
+      const sizeUSDC = Number(ethers.utils.formatUnits(position[3], 6));
+      const leverage = Number(position[8].toString());
+      const notionalValue = sizeUSDC * leverage;
+      const lotSize = notionalValue / openPriceConverted;
+      const isShort = position[2];
+      const currentPrice = (livePrices[rawAssetId] && livePrices[rawAssetId].currentPrice)
+                             ? livePrices[rawAssetId].currentPrice
+                             : openPriceConverted;
+      const profitUSDC = isShort
+                            ? (openPriceConverted - currentPrice) * lotSize
+                            : (currentPrice - openPriceConverted) * lotSize;
+      const profitPercent = (profitUSDC / notionalValue) * 100;
+      
+      // Calculate placeholders based on position type
+      let takeProfitPlaceholder, stopLossPlaceholder;
+      if (!isShort) {
+        // Long position: TP at 110% and SL at 90%
+        takeProfitPlaceholder = formatPrice(openPriceConverted * 1.10, assetName);
+        stopLossPlaceholder = formatPrice(openPriceConverted * 0.90, assetName);
+      } else {
+        // Short position: TP at 90% and SL at 110%
+        takeProfitPlaceholder = formatPrice(openPriceConverted * 0.90, assetName);
+        stopLossPlaceholder = formatPrice(openPriceConverted * 1.10, assetName);
+      }
+      
+      // Retrieve any entered values (if they exist)
+      const stopLossVal = stopLossInputs[id] || "";
+      const takeProfitVal = takeProfitInputs[id] || "";
+      
+      // Conditional style for position type (displaying "Long" or "Short" with color)
+      const isShortHtml = isShort 
+                            ? `<span class="price-down">${convertField("isShort", position[2])}</span>`
+                            : `<span class="price-up">${convertField("isShort", position[2])}</span>`;
+      
+      // Conditional style for profit (including percentage within the span)
+      const profitUSDCHtml = profitUSDC > 0 
+                               ? `<span class="price-up">${usdcFormat(profitUSDC)}</span>`
+                               : (profitUSDC < 0 
+                                    ? `<span class="price-down">${usdcFormat(profitUSDC)}</span>`
+                                    : usdcFormat(profitUSDC));
+      const profitPercentHtml = profitPercent > 0 
+                                  ? `<span class="price-up">${profitPercent.toFixed(2)} %</span>`
+                                  : (profitPercent < 0 
+                                       ? `<span class="price-down">${profitPercent.toFixed(2)} %</span>`
+                                       : `<span>${profitPercent.toFixed(2)} %</span>`);
+      
+      let html = `<div class="div-block-499">
+        <div class="div-block-507">
+          <div class="div-block-514">
+            <div class="div-block-523">
+              <div class="div-block-517">
+                <div class="text-block-253">${assetName}</div>
+                <div class="text-block-195">/USDT</div>
+              </div>
+              <div class="text-block-263">${isShortHtml}</div>
+            </div>
+          </div>
+          <div class="div-block-497">
+            <div>
+              <div class="text-block-260">Position PNL (USDT)</div>
+              <div class="text-block-254">${profitUSDCHtml}</div>
+              <div class="text-block-252">
+                <strong></strong>
+              </div>
+            </div>
+            <div id="w-node-f5a3995e-64f5-4116-b75b-7e0efaf72c36-1f521c30" class="div-block-528">
+              <div class="text-block-246">PNL</div>
+              <div class="text-block-248">${profitPercentHtml}</div>
+            </div>
+            <div>
+              <div class="text-block-257">Open Date</div>
+              <div class="text-block-268">${convertField("timestamp", position[5])}</div>
+            </div>
+          </div>
+          <div class="div-block-503">
+            <div class="div-block-518">
+              <div class="text-block-259">Entry Price</div>
+              <div class="text-block-265">${openPriceFormatted}</div>
+            </div>
+            <div class="div-block-530">
+              <div class="text-block-264">Liquidation Price</div>
+              <div class="text-block-251">${liquidationFormatted}</div>
+            </div>
+            <div class="div-block-527">
+              <div class="text-block-261">Market Price</div>
+              <div class="text-block-258">${currentPriceFormatted}</div>
+            </div>
+          </div>
+          <div class="div-block-506">
+            <div>
+              <div class="text-block-259">Quantity (${assetName})</div>
+              <div class="text-block-265">${lotSize.toFixed(8)}</div>
+            </div>
+            <div>
+              <div class="text-block-249">Margin (USDT)</div>
+              <div class="text-block-265">${usdcFormat(notionalValue)}</div>
+              <div class="text-block-252">
+                <strong></strong>
+              </div>
+            </div>
+            <div class="div-block-519">
+              <div class="text-block-267">Leverage</div>
+              <div class="text-block-265">
+                <strong class="bold-text-18">${leverage}</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="div-block-502">
+          <div class="div-block-521">
+            <div class="div-block-500">
+              <div class="text-block-247">Take Profit:</div>
+              <div class="text-block-247">${takeProfitFormatted}</div>
+            </div>
+            <div class="div-block-529">
+              <div class="div-block-524">
+                <input class="text-field-18 w-input" maxlength="256" name="Set-new-one-3" type="number" id="takeProfitInput-${id}" placeholder="${takeProfitPlaceholder}" data-expo="${expo}"
+                  value="${takeProfitVal}" oninput="takeProfitInputs['${id}'] = this.value" onblur="updatePositionsDisplay()" />
+                <div class="div-block-508">
+                  <a href="#" class="button-113 w-button" onclick="increaseInput('takeProfitInput-${id}', 1)">△</a>
+                  <a href="#" class="button-115 w-button" onclick="decreaseInput('takeProfitInput-${id}', 1)">▽</a>
+                </div>
+              </div>
+              <a id="w-node-f5a3995e-64f5-4116-b75b-7e0efaf72c77-1f521c30" href="#" class="button-112 w-button" onclick="updateTakeProfit(${id}, '${rawAssetId}', ${expo})">Set</a>
+            </div>
+          </div>
+          <div class="div-block-521">
+            <div class="div-block-500">
+              <div class="text-block-247">Stop Loss:</div>
+              <div class="text-block-247">${stopLossFormatted}</div>
+            </div>
+            <div class="div-block-529">
+              <div class="div-block-524">
+                <input class="text-field-18 w-input" type="number" id="stopLossInput-${id}" placeholder="${stopLossPlaceholder}" data-expo="${expo}"
+                  value="${stopLossVal}" oninput="stopLossInputs['${id}'] = this.value" onblur="updatePositionsDisplay()" required />
+                <div class="div-block-508">
+                  <a href="#" class="button-113 w-button" onclick="increaseInput('stopLossInput-${id}', 1)">△</a>
+                  <a href="#" class="button-115 w-button" onclick="decreaseInput('stopLossInput-${id}', 1)">▽</a>
+                </div>
+              </div>
+              <a id="w-node-f5a3995e-64f5-4116-b75b-7e0efaf72c90-1f521c30" href="#" class="button-112 w-button" onclick="updateStopLoss(${id}, '${rawAssetId}', ${expo})">Set</a>
+            </div>
+          </div>
+          <a id="w-node-f5a3995e-64f5-4116-b75b-7e0efaf72c98-1f521c30" href="#" class="button-114 w-button" onclick="closePosition(${id}, '${rawAssetId}')">Close Market</a>
+        </div>
+      </div>`;
+      return html;
+    }
+  
+    /************* INPUT ADJUSTMENT FUNCTIONS *************/
+    function increaseInput(inputId, amount) {
+      const inputElem = document.getElementById(inputId);
+      let currentValue = parseFloat(inputElem.value) || 0;
+      inputElem.value = currentValue + amount;
+      if (inputId.startsWith("stopLossInput-")) {
+        stopLossInputs[inputId.replace("stopLossInput-", "")] = inputElem.value;
+      } else if (inputId.startsWith("takeProfitInput-")) {
+        takeProfitInputs[inputId.replace("takeProfitInput-", "")] = inputElem.value;
+      }
+    }
+    function decreaseInput(inputId, amount) {
+      const inputElem = document.getElementById(inputId);
+      let currentValue = parseFloat(inputElem.value) || 0;
+      inputElem.value = currentValue - amount;
+      if (inputId.startsWith("stopLossInput-")) {
+        stopLossInputs[inputId.replace("stopLossInput-", "")] = inputElem.value;
+      } else if (inputId.startsWith("takeProfitInput-")) {
+        takeProfitInputs[inputId.replace("takeProfitInput-", "")] = inputElem.value;
+      }
+    }
+  
+    /************* STREAMING FUNCTION *************/
+    function initPriceStream(assetId) {
+      if (livePrices[assetId] && livePrices[assetId].eventSource) return;
+      const streamUrl = `https://hermes.pyth.network/v2/updates/price/stream?ids[]=${assetId}`;
+      const eventSource = new EventSource(streamUrl);
+      eventSource.onmessage = (e) => {
+        try {
+          const data = JSON.parse(e.data);
+          const parsed = data.parsed[0];
+          livePrices[assetId] = {
+            currentPrice: Number(parsed.price.price) * Math.pow(10, parsed.price.expo),
+            expo: Number(parsed.price.expo),
+            eventSource: eventSource
+          };
+          updatePositionsDisplay();
+        } catch (error) {
+          console.error('Error parsing stream for asset', assetId, error);
+        }
+      };
+      eventSource.onerror = (err) => {
+        console.error("Error connecting to stream for asset", assetId, err);
+      };
+      livePrices[assetId] = { currentPrice: 0, expo: 0, eventSource: eventSource };
+    }
+  
+    /************* UPDATE DISPLAY FUNCTION *************/
+    function updatePositionsDisplay() {
+      if (isUserSelectingText()) return;
+      const activeElem = document.activeElement;
+      if (activeElem && activeElem.id &&
+         (activeElem.id.startsWith("stopLossInput-") || activeElem.id.startsWith("takeProfitInput-"))) {
+        return;
+      }
+      
+      // Update dynamic counters
+      document.getElementById("openPositionsCount").textContent = cachedOpenPositions.length;
+      document.getElementById("closedPositionsCount").textContent = cachedClosedPositions.length;
+      document.getElementById("limitOrdersCount").textContent = cachedLimitOrders.length;
+      
+      // Build display for open positions
+      let htmlOpenPositions = "";
+      cachedOpenPositions.forEach((position, index) => {
+        const rawAssetId = position[7].toString();
+        initPriceStream(rawAssetId);
+        htmlOpenPositions += renderOpenPosition(
+          position,
+          cachedStopLosses[index],
+          cachedTakeProfits[index],
+          cachedLiquidationPrices[index]
+        );
+      });
+  
+      // Build display for closed positions
+      let htmlClosedPositions = "";
+      cachedClosedPositions.forEach((position) => {
+        const assetId = position[10].toString();
+        const assetData = assetMapping[assetId] || { symbol: assetId, expo: 0 };
+        const assetSymbol = assetData.symbol;
+        const expo = assetData.expo;
+        const openPriceConverted = applyExpoWithMapping(position[4].toString(), assetId);
+        const openPriceFormatted = formatPrice(openPriceConverted, assetSymbol);
+        const closePriceConverted = applyExpoWithMapping(position[5].toString(), assetId);
+        const closePriceFormatted = formatPrice(closePriceConverted, assetSymbol);
+        const leverage = Number(position[13].toString());
+        const sizeUSDC = Number(ethers.utils.formatUnits(position[3], 6));
+        const finalAmount = Number(ethers.utils.formatUnits(position[11], 6));
+        const profit = convertField("profit", position[12]);
+        const profitPercent = sizeUSDC > 0 ? ((finalAmount - sizeUSDC) / sizeUSDC) * 100 : 0;
+        htmlClosedPositions += `<div class="div-block-498">
+          <div class="text-block-250">${assetSymbol}/USDT</div>
+          <div class="text-block-250">${convertField("isShort", position[2])},</div>
+          <div class="text-block-250">${usdcFormat(sizeUSDC)}</div>
+          <div class="text-block-250">${openPriceFormatted}</div>
+          <div class="text-block-250">${closePriceFormatted}</div>
+          <div class="text-block-250">
+            <strong class="bold-text-18">×${leverage}</strong>
+          </div>
+          <div id="w-node-f5a3995e-64f5-4116-b75b-7e0efaf72cb8-1f521c30" class="text-block-250">
+            ${profit} (${profitPercent.toFixed(2)}%)
+          </div>
+        </div>`;
+      });
+  
+      // Build display for limit orders
+      let htmlLimitOrders = "";
+      cachedLimitOrders.forEach((order) => {
+        const assetId = order[5].toString();
+        const assetData = assetMapping[assetId] || { symbol: assetId, expo: 0 };
+        const assetSymbol = assetData.symbol;
+        const targetPriceConverted = applyExpoWithMapping(order[6].toString(), assetId);
+        const targetPriceFormatted = formatPrice(targetPriceConverted, assetSymbol);
+        const currentPriceFormattedOrder = (livePrices[assetId] && livePrices[assetId].currentPrice)
+          ? formatPrice(livePrices[assetId].currentPrice, assetSymbol)
+          : formatPrice(0, assetSymbol);
+        const sizeUSDC = Number(ethers.utils.formatUnits(order[3], 6));
+        const leverage = order[4].toString();
+      
+        htmlLimitOrders += `
+          <div class="div-block-513">
+            <div class="ordertext">${assetSymbol}/USD</div>
+            <div class="ordertext">${convertField("isShort", order[2])}</div>
+            <div class="ordertext">${targetPriceFormatted}</div>
+            <div class="ordertext">${currentPriceFormattedOrder}</div>
+            <div class="ordertext">${usdcFormat(sizeUSDC)}</div>
+            <div class="ordertext">${order[0].toString()}</div>
+            <div class="ordertext">${leverage}</div>
+            <a href="#" class="button-110 w-button" onclick="cancelLimitOrder(${order[0]})">
+              Cancel Order
+            </a>
+          </div>
+        `;
+      });
+  
+      // Inject HTML into corresponding containers
+      document.getElementById("openPositionsContainer").innerHTML = htmlOpenPositions;
+      document.getElementById("closedPositionsContainer").innerHTML = htmlClosedPositions;
+      document.getElementById("limitOrdersContainer").innerHTML = htmlLimitOrders;
+    }
+  
+    /************* CONTRACT INTERACTIONS *************/
+    async function connect() {
+      if (typeof window.ethereum !== 'undefined') {
+        try {
+          await ethereum.request({ method: 'eth_requestAccounts' });
+          provider = new ethers.providers.Web3Provider(window.ethereum);
+          signer = provider.getSigner();
+          const address = await signer.getAddress();
+          document.getElementById('wallet-address').innerText = address;
+          contract = new ethers.Contract(contractAddress, contractABI, signer);
+          contract.on("PositionOpened", () => { fetchPositions(); });
+          contract.on("PositionClosed", () => { fetchPositions(); });
+          contract.on("LimitOrderCanceled", () => { fetchPositions(); });
+          contract.on("LimitOrderExecuted", () => { fetchPositions(); });
+          fetchPositions();
+        } catch (error) {
+          console.error("Error during connection:", error);
+        }
+      } else {
+        showNotification("MetaMask is not installed. Please install it and try again.");
+      }
+    }
+  
+    async function fetchPositions() {
+      if (!contract) {
+        showNotification("Please connect your wallet first.");
+        return;
+      }
+      try {
+        const traderAddress = await signer.getAddress();
+        const ids = await contract.getTraderAllIds(traderAddress);
+        const openPositionIds = ids[0];
+        const closedPositionIds = ids[1];
+        const limitOrderIds = ids[2];
+  
+        const openPositions = await Promise.all(
+          openPositionIds.map(id => contract.positions(id))
+        );
+        const closedPositions = await Promise.all(
+          closedPositionIds.map(id => contract.closedPositions(id))
+        );
+        const limitOrders = await Promise.all(
+          limitOrderIds.map(id => contract.limitOrders(id))
+        );
+        const stopLosses = await Promise.all(
+          openPositionIds.map(id => contract.stopLosses(id))
+        );
+        const takeProfits = await Promise.all(
+          openPositionIds.map(id => contract.takeProfits(id))
+        );
+        const liquidationPrices = await Promise.all(
+          openPositionIds.map(id => contract.liquidationPrices(id))
+        );
+  
+        cachedOpenPositions = openPositions;
+        cachedStopLosses = stopLosses;
+        cachedTakeProfits = takeProfits;
+        cachedLiquidationPrices = liquidationPrices;
+        cachedClosedPositions = closedPositions;
+        cachedLimitOrders = limitOrders;
+  
+        openPositions.forEach(position => {
+          const rawAssetId = position[7].toString();
+          initPriceStream(rawAssetId);
+        });
+        limitOrders.forEach(order => {
+          const rawAssetId = order[5].toString();
+          initPriceStream(rawAssetId);
+        });
+  
+        updatePositionsDisplay();
+      } catch (error) {
+        console.error("Error fetching positions:", error);
+      }
+    }
+  
+    async function updateStopLoss(positionId, assetId, expo) {
+      const inputElem = document.getElementById(`stopLossInput-${positionId}`);
+      const userValue = Number(inputElem.value);
+      const newStopLoss = userValue * Math.pow(10, -expo);
+      try {
+        const tx = await contract.updateStopLoss(positionId, newStopLoss);
+        await tx.wait();
+        showNotification(`Stop Loss for position ${positionId} updated successfully.`);
+        fetchPositions();
+      } catch (error) {
+        console.error("Error updating Stop Loss:", error);
+      }
+    }
+  
+    async function updateTakeProfit(positionId, assetId, expo) {
+      const inputElem = document.getElementById(`takeProfitInput-${positionId}`);
+      const userValue = Number(inputElem.value);
+      const newTakeProfit = userValue * Math.pow(10, -expo);
+      try {
+        const tx = await contract.updateTakeProfit(positionId, newTakeProfit);
+        await tx.wait();
+        showNotification(`Take Profit for position ${positionId} updated successfully.`);
+        fetchPositions();
+      } catch (error) {
+        console.error("Error updating Take Profit:", error);
+      }
+    }
+  
+    async function closePosition(positionId, assetId) {
+      try {
+        const response = await fetch(`https://hermes.pyth.network/v2/updates/price/latest?ids[]=${assetId}`);
+        const json = await response.json();
+        let priceUpdateHex = json.binary.data[0];
+        if (!priceUpdateHex.startsWith("0x")) {
+          priceUpdateHex = "0x" + priceUpdateHex;
+        }
+        const priceUpdateArray = [priceUpdateHex];
+        const tx = await contract.closePosition(positionId, priceUpdateArray, { value: 0 });
+        await tx.wait();
+        showNotification(`Position ${positionId} closed successfully.`);
+        fetchPositions();
+      } catch (error) {
+        console.error("Error closing position:", error);
+      }
+    }
+  
+    async function cancelLimitOrder(orderId) {
+      try {
+        const tx = await contract.cancelLimitOrder(orderId);
+        await tx.wait();
+        showNotification(`Limit order ${orderId} cancelled successfully.`);
+        fetchPositions();
+      } catch (error) {
+        console.error("Error cancelling limit order:", error);
+      }
+    }
+  
+    document.addEventListener("DOMContentLoaded", () => {
+      updatePositionsDisplay();
+    });
+  </script>
+  
+      
     <style>
   .price-up { 
       color: #2a8bff; /* Vert */
@@ -2874,12 +2915,7 @@ document.getElementById('chartTypeToggle').addEventListener('click', () => {
       
   }
 
-  #chartContainer {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      background: #000;
-    }
+  
     .watermark {
       position: absolute;
       top: 50%;
@@ -2900,10 +2936,32 @@ document.getElementById('chartTypeToggle').addEventListener('click', () => {
       position: fixed; top: 10px; left: 50%;
       transform: translateX(-50%);
       background-color: #000000; color: white;
-      padding: 10px 20px; 
+      padding: 10px 20px; http://192.168.1.42:8080/#
       box-shadow: 0 0 10px rgba(0,0,0,0.5);
       display: none; z-index: 1000;
     }
+    /* Cacher les flèches +/- dans les inputs de type number */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+/* Cacher les scrollbars (mais permettre le scroll) */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* facultatif */
+}
+
+body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
   </style>
   <script>
     (function(){
@@ -2982,6 +3040,136 @@ document.getElementById('chartTypeToggle').addEventListener('click', () => {
       };
     })();
   </script>
+  <script>
+    const targetDiv = document.getElementById("w-node-_655bec7b-eaf2-c952-5d89-dbca9e08e6d8-1f521c30");
+
+targetDiv.addEventListener("click", () => {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen().catch(err => {
+      console.error(`Erreur lors du passage en plein écran: ${err.message}`);
+    });
+  } else {
+    document.exitFullscreen().catch(err => {
+      console.error(`Erreur lors de la sortie du plein écran: ${err.message}`);
+    });
+  }
+});
+
+
+  </script>
+     <script>
+        // Variables
+        const testFileUrl = 'https://httpbin.org/bytes/1048576'; // Fichier de 1MB
+        const testIntervalTime = 60000; // 60 secondes
+
+        // Mesure de latence
+        async function measureLatency() {
+            try {
+                const start = performance.now();
+                await fetch('https://httpbin.org/get', {method: 'HEAD', cache: 'no-store'});
+                const latency = Math.round(performance.now() - start);
+                
+                document.getElementById('latency1').textContent = `Latence 1: ${latency} ms`;
+                document.getElementById('latency2').textContent = `Latence 2: ${latency} ms`;
+                
+                return latency;
+            } catch (error) {
+                document.getElementById('latency1').textContent = 'Erreur latence';
+                document.getElementById('latency2').textContent = 'Erreur latence';
+                return null;
+            }
+        }
+
+        // Mesure de débit
+        async function measureSpeed() {
+            try {
+                const start = performance.now();
+                const response = await fetch(testFileUrl + '?r=' + Math.random(), {cache: 'no-store'});
+                const totalBytes = parseInt(response.headers.get('content-length') || '1048576');
+                await response.arrayBuffer();
+                const duration = (performance.now() - start) / 1000;
+                const speedMbps = ((totalBytes * 8) / (1024 * 1024)) / duration;
+                
+                document.getElementById('speed1').textContent = `Débit 1: ${speedMbps.toFixed(2)} Mbps`;
+                document.getElementById('speed2').textContent = `Débit 2: ${speedMbps.toFixed(2)} Mbps`;
+                
+                return speedMbps;
+            } catch (error) {
+                document.getElementById('speed1').textContent = 'Erreur débit';
+                document.getElementById('speed2').textContent = 'Erreur débit';
+                return null;
+            }
+        }
+
+        // Compte à rebours
+        function startCountdown(seconds) {
+            let counter = seconds;
+            const countdownElement = document.getElementById('countdown');
+            
+            const interval = setInterval(() => {
+                counter--;
+                countdownElement.textContent = counter;
+                
+                if (counter <= 0) {
+                    clearInterval(interval);
+                    runTests();
+                }
+            }, 1000);
+        }
+
+        // Exécuter tous les tests
+        async function runTests() {
+            document.getElementById('countdown').textContent = "60";
+            await measureLatency();
+            await measureSpeed();
+            startCountdown(60);
+        }
+
+        // Démarrer au chargement
+        window.onload = runTests;
+    </script>
+     <script>
+        async function runTest() {
+          const testImageUrl = "https://upload.wikimedia.org/wikipedia/commons/3/3f/JPEG_example_flower.jpg";
+          const testImageSize = 30839; // File size in bytes (31 KB)
+    
+          // Latency test
+          try {
+            const latencyStart = performance.now();
+            await fetch(testImageUrl, { method: "HEAD" });
+            const latencyEnd = performance.now();
+            const latency = latencyEnd - latencyStart;
+            document.querySelectorAll("#latency-result").forEach(el => {
+              el.textContent = `${latency.toFixed(2)}`;
+            });
+          } catch (error) {
+            document.querySelectorAll("#latency-result").forEach(el => {
+              el.textContent = "Test error";
+            });
+          }
+    
+          // Download speed test
+          try {
+            const downloadStart = performance.now();
+            const response = await fetch(testImageUrl);
+            await response.blob();
+            const downloadEnd = performance.now();
+    
+            const durationInSeconds = (downloadEnd - downloadStart) / 1000;
+            const speedMbps = (testImageSize * 8) / (durationInSeconds * 1000000);
+    
+            document.querySelectorAll("#speed-result").forEach(el => {
+              el.textContent = `${speedMbps.toFixed(2)}`;
+            });
+          } catch (error) {
+            document.querySelectorAll("#speed-result").forEach(el => {
+              el.textContent = "Test error";
+            });
+          }
+        }
+    
+        window.onload = runTest;
+      </script>
   
   
   </body>
